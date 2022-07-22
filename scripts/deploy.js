@@ -1,5 +1,5 @@
 async function main() {
-    const [deployer] = await ethers.getSigners();           //get account access
+    const [deployer] = await ethers.getSigners();           //get account access of deployer
     const Token = await ethers.getContractFactory("Token"); //creating object of token contract
     const token = await Token.deploy();                     //deploy token contract with hardhat
     console.log("Token Address", token.address);
